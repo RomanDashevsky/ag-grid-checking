@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import {AgGridAngular} from "ag-grid-angular";
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,8 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  @ViewChild('agGrid') agGrid: AgGridAngular;
+
   title = 'app';
 
   columnDefs = [
